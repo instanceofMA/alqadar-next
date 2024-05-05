@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
     CubeTransparentIcon,
@@ -11,54 +11,56 @@ import {
     SquaresPlusIcon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
-const services = [
-    {
-        name: "IT Solutions",
-        description: "Workstations, servers, network switches, CCTV, and more.",
-        href: "/services/it",
-        icon: GlobeAltIcon,
-    },
-    {
-        name: "Electrical Services",
-        description: "Power generation, management, wiring, and labelling.",
-        href: "/services/electrical",
-        icon: BoltIcon,
-    },
-    {
-        name: "Solar Energy Solutions",
-        description: "Commercial and domestic solar power generation.",
-        href: "/services/solar",
-        icon: SunIcon,
-    },
-    {
-        name: "General Order Supplies",
-        description:
-            "A range of essential products for quality and reliability.",
-        href: "/services/supplies",
-        icon: SquaresPlusIcon,
-    },
-    {
-        name: "Automation",
-        description: "Talk with your machines like it's the future.",
-        href: "/services/automation",
-        icon: CubeTransparentIcon,
-    },
-];
+import { ChevronDownIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
 export default function Header() {
+    const services = [
+        {
+            name: "IT Solutions",
+            description: "Workstations, servers, network switches, CCTV, and more.",
+            href: "/services/it",
+            icon: GlobeAltIcon,
+        },
+        {
+            name: "Electrical Services",
+            description: "Power generation, management, wiring, and labelling.",
+            href: "/services/electrical",
+            icon: BoltIcon,
+        },
+        {
+            name: "Solar Energy Solutions",
+            description: "Commercial and domestic solar power generation.",
+            href: "/services/solar",
+            icon: SunIcon,
+        },
+        {
+            name: "General Order Supplies",
+            description:
+                "A range of essential products for quality and reliability.",
+            href: "/services/supplies",
+            icon: SquaresPlusIcon,
+        },
+        {
+            name: "Automation",
+            description: "Talk with your machines like it's the future.",
+            href: "/services/automation",
+            icon: CubeTransparentIcon,
+        },
+    ];
+    
+    const callToAction = "Get Consultation";
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <header className="absolute w-full z-10">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-                <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                <div className="flex lg:flex-1 hover:-translate-y-3 transition ease-in-out duration-500">
+                    <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Al-Qadar</span>
                         <img
                             className="h-8 w-auto"
@@ -85,7 +87,6 @@ export default function Header() {
                         </Popover.Button>
 
                         <Transition
-                            as={Fragment}
                             enter="transition ease-out duration-200"
                             enterFrom="opacity-0 translate-y-1"
                             enterTo="opacity-100 translate-y-0"
@@ -93,7 +94,7 @@ export default function Header() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-gray-300 shadow-lg ring-1 ring-gray-900/5">
+                            <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                                 <div className="p-4">
                                     {services.map((item) => (
                                         <div
@@ -144,9 +145,9 @@ export default function Header() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a
                         href="mailto:smt@alqadar.org"
-                        className="text-sm font-semibold leading-6 text-gray-100 border-orange-500 border-2 rounded-md shadow-sm hover:bg-orange-500 transition-all ease-in-out duration-300 px-3.5 py-2.5"
+                        className="group flex items-center gap-1 text-sm font-semibold leading-6 text-gray-100 border-orange-600 border-2 bg-gradient-to-r from-orange-600 to-transparent from-50% to-50% bg-[length:200%_100%] bg-right-bottom rounded-md shadow-sm hover:bg-left-bottom transition-all ease-in-out duration-500 px-3.5 py-2.5"
                     >
-                        Get In Touch <span>&rarr;</span>
+                        {callToAction} <ArrowRightIcon className="inline-block h-4 w-4 text-gray-200 group-hover:-rotate-45 transition-all ease-in-out duration-500" />
                     </a>
                 </div>
             </nav>
@@ -158,8 +159,8 @@ export default function Header() {
             >
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-300 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                    <div className="flex items-center justify-between hover:-translate-y-3 transition ease-in-out duration-500">
+                        <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Al-Qadar</span>
                             <img
                                 className="h-8 w-auto"
@@ -232,7 +233,7 @@ export default function Header() {
                                     href="mailto:smt@alqadar.org"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/20"
                                 >
-                                    Get In Touch
+                                    {callToAction}
                                 </a>
                             </div>
                         </div>
