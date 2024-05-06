@@ -25,7 +25,7 @@ export default function LogoCloud() {
                 {
                     logos.map(({ path, alt }, index) => {
                         return <img
-                            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1 flex-[1_0_10%]"
+                            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1 flex-[1_0_10%] hover:-translate-y-3 transition ease-in-out duration-500"
                             src={ path }
                             alt={ alt }
                             width={320}
