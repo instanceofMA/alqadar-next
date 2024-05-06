@@ -7,7 +7,7 @@ export default function Hero() {
     const cta = "Get in touch";
 
     return (
-        <div className="relative isolate overflow-hidden pt-14 snap-start snap-always">
+        <div className="relative isolate overflow-hidden pt-14 snap-start snap-always select-none">
             <Image src="/hero-bg.png" width="2830" height="2830" quality="80" priority={true} alt="background image, a lot of buildings" className="absolute inset-0 -z-20 h-full w-full object-cover brightness-[0.15]" />
             {/* <Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2830&amp;q=80&amp;blend=111827&amp;sat=-100&amp;exp=15&amp;blend-mode=multiply" width="2830" height="2830" alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" /> */}
             <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">

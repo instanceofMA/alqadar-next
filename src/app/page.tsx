@@ -5,7 +5,7 @@ import LogoCloud from "./ui/logoCloud";
 
 export default function Home() {
     return (
-        <div className="snap-y snap-proximity select-none">
+        <div className="snap-y snap-proximity">
             <Hero />
             <Features />
             <LogoCloud />

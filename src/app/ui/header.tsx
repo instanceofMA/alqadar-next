@@ -57,7 +57,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="absolute w-full z-10">
+        <header className="absolute w-full z-10 select-none">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1 hover:-translate-y-3 transition ease-in-out duration-500">
                     <a href="/" className="-m-1.5 p-1.5">
