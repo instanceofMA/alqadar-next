@@ -26,7 +26,7 @@ export default function RootLayout({
                 />
                 {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
             </head>
-            <body className={`${inter.className} antialiased bg-body text-body font-body bg-orange-600`}>
+            <body className={`${inter.className} antialiased bg-body text-body font-body bg-orange-600 overflow-x-hidden`}>
                 <Header />
                 {children}
                 <Footer />

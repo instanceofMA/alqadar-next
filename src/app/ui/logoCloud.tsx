@@ -17,23 +17,27 @@ export default function LogoCloud() {
 
     return (
         <div className="bg-white py-24 sm:py-32 select-none">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto px-6 lg:px-8 overflow-hidden">
                 <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
                     Trusted by the Pakistan's most established brands
                 </h2>
-            <div className="mx-auto mt-10 flex flex-wrap max-w-lg items-center justify-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
-                {
-                    logos.map(({ path, alt }, index) => {
-                        return <img
-                            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1 flex-[1_0_10%] hover:-translate-y-3 transition ease-in-out duration-500"
-                            src={ path }
-                            alt={ alt }
-                            width={320}
-                            height={320}
-                        />
-                    })
-                }
-            </div>
+                <div>
+
+                <div className="mt-10 flex gap-x-4 sm:gap-x-6 w-full animate-infinite-scroll hover:paused">
+                    {
+                        [...logos, ...logos].map(({ path, alt }, index) => {
+                            return <div key={index} className="flex justify-center shrink-0 items-center w-32 h-32">
+                                <img
+                                    className="hover:-translate-y-3 transition ease-in-out duration-500"
+                                    src={ path }
+                                    alt={ alt }
+                                    width={60}
+                                />
+                            </div>
+                        })
+                    }
+                </div>
+                </div>
             </div>
         </div>
     );

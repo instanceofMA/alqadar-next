@@ -52,7 +52,10 @@ export default function Header() {
         },
     ];
     
-    const callToAction = "Get Consultation";
+    const callToAction = {
+        text: "Get Consultation",
+        href: "mailto:smt@alqadar.org"
+    };
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -144,10 +147,10 @@ export default function Header() {
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a
-                        href="mailto:smt@alqadar.org"
+                        href={callToAction.href}
                         className="group flex items-center gap-1 text-sm font-semibold leading-6 text-gray-100 border-orange-600 border-2 bg-gradient-to-r from-orange-600 to-transparent from-50% to-50% bg-[length:200%_100%] bg-right-bottom rounded-md shadow-sm hover:bg-left-bottom transition-all ease-in-out duration-500 px-3.5 py-2.5"
                     >
-                        {callToAction} <ArrowRightIcon className="inline-block h-4 w-4 text-gray-200 group-hover:-rotate-45 transition-all ease-in-out duration-500" />
+                        {callToAction.text} <ArrowRightIcon className="inline-block h-4 w-4 text-gray-200 group-hover:-rotate-45 transition-all ease-in-out duration-500" />
                     </a>
                 </div>
             </nav>

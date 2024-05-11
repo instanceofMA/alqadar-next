@@ -7,8 +7,8 @@ export default function Home() {
     return (
         <div className="snap-y snap-proximity">
             <Hero />
-            <Features />
             <LogoCloud />
+            <Features />
         </div>
     );
 }

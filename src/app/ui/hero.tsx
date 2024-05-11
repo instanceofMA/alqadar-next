@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function Hero() {
     const headline = <>Your partner in <span className='bg-gradient-to-r from-blue-300 to-orange-600 bg-clip-text text-transparent'>excellence</span></>;
     const text = "Cutting edge solutions in IT, Electrical, and Solar sectors.";
-    const cta = "Get in touch";
+    const callToAction = {
+        text: "Get in touch",
+        href: "mailto:smt@alqadar.org"
+    };
 
     return (
         <div className="relative isolate overflow-hidden pt-14 snap-start snap-always select-none">
@@ -27,9 +30,9 @@ export default function Hero() {
                     <p className="mt-6 text-lg leading-8 text-gray-300 hover:-translate-y-3 transition ease-in-out duration-300">{text}</p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
-                        href="#"
+                        href={callToAction.href}
                         className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 transition-all ease-in-out duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
-                        >{cta}</Link>
+                        >{callToAction.text}</Link>
                         <Link
                         href="#feature-0"
                         className="text-sm font-semibold leading-6 text-white hover:scale-105 transition ease-in-out duration-500">

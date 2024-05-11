@@ -19,12 +19,19 @@ const config: Config = {
         },
       },
     },
+    animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+    }, 
     keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
+        'infinite-scroll': {
+            from: { transform: 'translateX(0)' },
+            to: { transform: 'translateX(-143.6%)' },
         },
-      },
+        shimmer: {
+            '100%': {
+            transform: 'translateX(100%)',
+            },
+        },
     },
     fontFamily: {
         body: '"DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
