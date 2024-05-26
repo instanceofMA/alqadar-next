@@ -128,19 +128,19 @@ export default function Header() {
 
                     <a
                         href="/projects"
-                        className="text-sm font-semibold leading-6 text-gray-100"
+                        className="text-sm font-semibold leading-6 text-gray-100 after:duration-500 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-orange-600 after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100"
                     >
                         Projects
                     </a>
                     <a
                         href="/partners"
-                        className="text-sm font-semibold leading-6 text-gray-100"
+                        className="text-sm font-semibold leading-6 text-gray-100 after:duration-500 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-orange-600 after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100"
                     >
                         Partners
                     </a>
                     <a
                         href="/company"
-                        className="text-sm font-semibold leading-6 text-gray-100"
+                        className="text-sm font-semibold leading-6 text-gray-100 after:duration-500 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-orange-600 after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100"
                     >
                         Company
                     </a>
